@@ -1,66 +1,155 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# SiteMetrosCuadrados - Plataforma de Bienes Raíces
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 1. Resumen del Proyecto
 
-## About Laravel
+**SiteMetrosCuadrados** es una aplicación web completa construida con el framework Laravel, diseñada para funcionar como un portal de bienes raíces. Permite a los administradores y agentes inmobiliarios gestionar y publicar propiedades, y a los usuarios finales buscar, filtrar y consultar información sobre estas propiedades.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+La plataforma incluye un panel de administración robusto para la gestión de todo el contenido, un portal para agentes, y una interfaz pública para los visitantes.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 2. Características Principales
 
-## Learning Laravel
+La aplicación se divide en dos áreas principales: el panel de administración y el sitio público.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Funcionalidades del Panel de Administración
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Gestión de Propiedades:**
+  - Crear, leer, actualizar y eliminar (CRUD) listados de propiedades.
+  - Asignar múltiples atributos: tipo de propiedad, ciudad, propósito (venta/alquiler), precio, área, número de habitaciones, baños, etc.
+  - Subir múltiples imágenes por propiedad (imagen destacada, imagen de banner, galería de imágenes).
+  - Subir un archivo PDF asociado a una propiedad.
+  - Marcar propiedades como destacadas, urgentes o top.
+- **Gestión de Agentes:**
+  - Administrar los usuarios (agentes) que pueden publicar propiedades.
+- **Gestión de Contenido y Taxonomías:**
+  - Administrar tipos de propiedad (ej. Casa, Apartamento).
+  - Administrar ciudades y ubicaciones.
+  - Administrar "amenidades" (ej. Piscina, Gimnasio) y asignarlas a las propiedades.
+  - Gestionar un sistema de Blog con categorías y comentarios.
+- **Gestión de Usuarios y Comunicación:**
+  - Visualizar y gestionar las reseñas de propiedades dejadas por los usuarios.
+  - Ver listas de deseos (`wishlists`) de los usuarios.
+- **Traducciones:**
+  - Soporte para la traducción de contenido de propiedades a múltiples idiomas.
 
-## Laravel Sponsors
+### Funcionalidades del Sitio Público
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- **Búsqueda y Visualización de Propiedades:**
+  - Ver listados de propiedades con galerías de imágenes, descripciones detalladas, características y ubicación en el mapa.
+  - Filtrar propiedades por tipo, ciudad, propósito y otros atributos.
+- **Interacción del Usuario:**
+  - Dejar reseñas y calificaciones en las propiedades.
+  - Añadir propiedades a una lista de deseos personal.
+- **Blog Informativo:**
+  - Leer artículos y noticias relacionadas con el sector inmobiliario.
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+## 3. Pila Tecnológica
 
-## Contributing
+- **Backend:**
+  - [Laravel Framework](https://laravel.com/)
+  - PHP
+- **Frontend:**
+  - HTML5 / CSS3
+  - JavaScript
+  - Laravel Mix para la compilación de assets.
+- **Base de Datos:**
+  - MySQL (configurable en el archivo `.env`).
+- **Librerías PHP Clave:**
+  - **Intervention/Image:** Para el procesamiento y guardado de imágenes.
+  - **Maatwebsite/Excel:** Para funcionalidades de importación/exportación de datos (ej. Ciudades).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 4. Instalación y Configuración Local
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Sigue estos pasos para configurar el proyecto en un entorno de desarrollo local:
 
-## Security Vulnerabilities
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone <URL_DEL_REPOSITORIO>
+    cd SiteMetrosCuadrados
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+2.  **Instalar dependencias de PHP:**
+    ```bash
+    composer install
+    ```
 
-## License
+3.  **Crear el archivo de entorno:**
+    Copia el archivo de ejemplo `.env.example` y renómbralo a `.env`.
+    ```bash
+    cp .env.example .env
+    ```
+
+4.  **Generar la clave de la aplicación:**
+    ```bash
+    php artisan key:generate
+    ```
+
+5.  **Configurar la base de datos:**
+    Abre el archivo `.env` y modifica las siguientes variables con tus credenciales de base de datos local:
+    ```
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=db_metroscuadrados
+    DB_USERNAME=root
+    DB_PASSWORD=
+    ```
+
+6.  **Ejecutar las migraciones y seeders:**
+    Esto creará la estructura de la base de datos y la llenará con datos iniciales si existen seeders.
+    ```bash
+    php artisan migrate --seed
+    ```
+
+7.  **Instalar dependencias de Node.js y compilar assets:**
+    ```bash
+    npm install
+    npm run dev
+    ```
+
+8.  **Iniciar el servidor de desarrollo:**
+    ```bash
+    php artisan serve
+    ```
+    La aplicación estará disponible en `http://127.0.0.1:8000`.
+
+---
+
+## 5. Configuración para Producción en Hosting Compartido
+
+Si la aplicación se despliega en un entorno de hosting compartido (como cPanel o DirectAdmin) donde el `Document Root` del servidor es `public_html` en lugar de la carpeta `public` de Laravel, es necesario realizar un ajuste para que la subida de archivos y las rutas públicas funcionen correctamente.
+
+**Problema:** La función `public_path()` de Laravel resuelve la ruta a la carpeta `public` del proyecto, pero en el servidor esta carpeta no es accesible públicamente. Esto causa que los archivos subidos no se encuentren (error 404).
+
+**Solución:** Se debe sobreescribir la ruta pública de Laravel para que apunte al `Document Root` correcto del servidor (ej. `public_html`).
+
+1.  **Abrir el archivo `app/Providers/AppServiceProvider.php`**.
+2.  **Añadir el siguiente código dentro del método `register()`**:
+
+    ```php
+    public function register()
+    {
+        $this->app->bind('path.public', function () {
+            // Apunta a la carpeta public_html que está al mismo nivel que la carpeta del proyecto Laravel
+            return dirname(base_path()) . '/public_html';
+        });
+    }
+    ```
+
+3.  **Limpiar la caché de configuración:** Después de subir el cambio al servidor, es crucial eliminar los archivos de caché de configuración para que Laravel aplique la nueva ruta. Eliminar los siguientes archivos si existen:
+    *   `bootstrap/cache/config.php`
+    *   `bootstrap/cache/services.php`
+    *   `bootstrap/cache/packages.php`
+
+Con esta configuración, cualquier parte de la aplicación que utilice `public_path()` (como los controladores que suben imágenes) resolverá a la ruta correcta, asegurando que los archivos sean accesibles desde la web.
+
+---
+
+## 6. Licencia
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
